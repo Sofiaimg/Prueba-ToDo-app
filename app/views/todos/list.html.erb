@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+        <h2 class="pending">Pending ToDos</h2>
+          <div class="well">
+          <% @todos.each do |todo| %>
+          <p> <%= todo.description if todo.completed == false %> </p>
+          <br>
+          <% end %>
+          </div>
+
+        </div>
+        <div class="col-md-6">
+        <h2 class="complete">Completed ToDos</h2>
+
+          <div class="well">
+          <% @todos.each do |todo| %>
+          <p> <%= todo.description if todo.completed == true %> </p>
+          <br>
+          <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

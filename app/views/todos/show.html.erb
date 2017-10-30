@@ -1,0 +1,17 @@
+<div class="container">
+	<div class="well row">
+		<div class="col-md-4">
+			<h3> Description </h3>
+			<p><%= @todo.description %></p>
+			<small> Created : <%= time_ago_in_words @todo.created_at %> </small>
+
+		</div>
+
+		<div class="col-md-4">
+		  <h3> Status </h3>
+						<%= 'Completed' if @todo.completed == true %>
+						<%= 'Pending' if @todo.completed == false %>
+		</div>
+	</div>
+		<h3> <%= link_to 'Back', todos_path %> </h3>
+</div>

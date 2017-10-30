@@ -1,0 +1,15 @@
+<div class="container well">
+
+    <%=form_with model: @todo, local: true do |f| %>
+      <%= f.label "Todo Description" %>
+      <%= f.text_field :description %>
+      <br>
+      <br>
+
+      <%= f.label "Mark only when completed" %>
+      <%= f.hidden_field :completed %>
+      <%= f.check_box :completed %>
+      <br>
+      <%= f.submit "Save Todo" %>
+    <% end %>
+</div>
